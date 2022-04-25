@@ -12,14 +12,14 @@ class Homepage extends StatelessWidget {
     
     return Scaffold(
       appBar: AppBar(
-      title: const Text("Catalog App"),
-      ),
-        body: Center(
-          child: Container(
-           child: Text('Welcome to $days days of flutter by $name'),
+        title:Center(child: const Text("Catalog App"))),     
+          body: Center(
+            child: Container(
+              child: Text('Welcome to $days days of flutter by $name'),
+            ),
           ),
-        ),
         drawer: const MyDrawer(),
-      );
+    );
+  }
 }
-}
+
