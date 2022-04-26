@@ -1,5 +1,34 @@
+class Catalogmodel {
+  static final items = [
+    Item(
+        id: 1,
+        name: "iphone 12 pro",
+        desc: "Apple iphone 12th generation with three base variants",
+        price: 999,
+        color: "#33505a",
+        image: "https://m.media-amazon.com/images/I/71MHTD3uL4L.jpg"),
+  
+  Item(
+        id: 2,
+        name: "iphone Xr",
+        desc: "Apple iphone Xr generation with three base variants",
+        price: 566,
+        color: "#33505b",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT28Za6rS2Ikfh2aTekT5YwZfWSGwmX4hAr0G_VXqWW5g7vjb-rO4bYghFov9gt_OwGHM&usqp=CAU"),
+        
+  Item(
+        id: 3,
+        name: "iphone 13",
+        desc: "Apple iphone 12th generation with three base variants",
+        price: 789,
+        color: "#33505c",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStxnvG0lDpB3ixnn9TSf8ahkBFzYo7riSJBA&usqp=CAU")
+        
+  ];
+}
+
 class Item {
-  final String id;
+  final int id;
   final String name;
   final String desc;
   final num price;
@@ -14,21 +43,3 @@ class Item {
       required this.color,
       required this.image});
 }
-
-final product1 = [
-  Item(
-      id: "Codepur 1",
-      name: "iphone 12 pro",
-      desc: "Apple iphone 12 generation with three base variants",
-      price: 999,
-      color: "#33505a",
-      image: "https://m.media-amazon.com/images/I/71MHTD3uL4L.jpg")
-],
-      id: "Codepur 2",
-      name: "iphone 13 ",
-      desc: "Apple iphone 13 generation with three base variants",
-      price: 3529,
-      color: "#33506a",
-      image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP7Rk7Pg_6y-Lx-kp5Z5KP0l_XkizZv3fhBg&usqp=CAU")
-],
