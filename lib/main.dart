@@ -13,8 +13,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    int days = 30;
-    String name = "codepur";
     return MaterialApp(
       themeMode: ThemeMode.light,
       theme: MyTheme.lightTheme(context),
@@ -23,7 +21,7 @@ class MyApp extends StatelessWidget {
       initialRoute: "Myroutes.homeRoute",
       routes: {
         "/": (context) => const Loginpage(),
-        Myroutes.homeRoute: (context) => const Homepage(),
+        Myroutes.homeRoute: (context) =>  const Homepage(),
         Myroutes.loginRoute: (context) => const Loginpage(),
       },
     );
