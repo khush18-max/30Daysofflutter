@@ -1,15 +1,14 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:convert';
 import 'package:hello/models/catalog.dart';
-import 'package:hello/pages/cart_page.dart';
 import 'package:hello/utils.dart/routes.dart';
-
 import 'package:hello/widgets/home_widgets/catalog_list.dart';
 import 'package:hello/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
-
 import '../widgets/home_widgets/catalog_header.dart';
 
 
@@ -45,11 +44,12 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: MyTheme.creamColor,
-        floatingActionButton: FloatingActionButton(onPressed: () => Navigator.pushNamed(context, Myroutes.cartRoute),
-        backgroundColor: MyTheme.darkBluishColor,
-        child: const Icon(CupertinoIcons.cart),
-      ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () => Navigator.pushNamed(context, Myroutes.cartRoute),
+          backgroundColor: MyTheme.lightBluishColor,
+          child: const Icon(CupertinoIcons.cart),
+        ),
+        backgroundColor: context.cardColor,
         body: SafeArea(
           child: Container(
             padding: Vx.m32,

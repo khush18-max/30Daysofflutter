@@ -1,9 +1,9 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
-import  'package:hello/models/catalog.dart';
+import 'package:hello/models/catalog.dart';
 import 'package:hello/pages/home_detailpage.dart';
-import 'package:hello/pages/home_page.dart';
 import 'package:hello/widgets/home_widgets/catalog_image.dart';
-import 'package:hello/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 
@@ -43,7 +43,7 @@ class CatalogItem extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              catalog.name.text.lg.color(MyTheme.darkBluishColor).bold.make(),
+              catalog.name.text.lg.color(context.accentColor).bold.make(),
               catalog.desc.text.textStyle(context.captionStyle!).make(),
               10.heightBox,
               ButtonBar(
@@ -55,7 +55,7 @@ class CatalogItem extends StatelessWidget {
                       onPressed: (() {}),
                       style: ButtonStyle(
                         backgroundColor:
-                            MaterialStateProperty.all(MyTheme.darkBluishColor),
+                            MaterialStateProperty.all(context.theme.buttonColor),
                         shape: MaterialStateProperty.all(const StadiumBorder()),
                       ),
                       child: "Add to cart".text.make()),
@@ -65,6 +65,6 @@ class CatalogItem extends StatelessWidget {
           ))
         ],
       ),
-    ).white.rounded.square(150).make().py16();
+    ).color(context.canvasColor).rounded.square(150).make().py16();
   }
 }

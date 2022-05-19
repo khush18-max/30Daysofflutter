@@ -1,6 +1,9 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:hello/models/catalog.dart';
-import 'package:hello/widgets/themes.dart';
+
+
 import 'package:velocity_x/velocity_x.dart';
 
 class HomeDetailspage extends StatelessWidget {
@@ -13,9 +16,9 @@ class HomeDetailspage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
       ),
-      backgroundColor: MyTheme.creamColor,
+      backgroundColor: context.canvasColor,
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: context.cardColor,
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           buttonPadding: EdgeInsets.zero,
@@ -24,8 +27,7 @@ class HomeDetailspage extends StatelessWidget {
             ElevatedButton(
                     onPressed: (() {}),
                     style: ButtonStyle(
-                      backgroundColor:
-                          MaterialStateProperty.all(MyTheme.darkBluishColor),
+                      backgroundColor: MaterialStateProperty.all(Vx.indigo500),
                       shape: MaterialStateProperty.all(const StadiumBorder()),
                     ),
                     child: "Add to Cart".text.make())
@@ -47,14 +49,11 @@ class HomeDetailspage extends StatelessWidget {
               arcType: VxArcType.CONVEY,
               edge: VxEdge.TOP,
               child: Container(
-                color: Colors.white,
+                color: context.cardColor,
                 width: context.screenWidth,
                 child: Column(
                   children: [
-                    catalog.name.text.xl4
-                        .color(MyTheme.darkBluishColor)
-                        .bold
-                        .make(),
+                    catalog.name.text.lg.color(context.accentColor).bold.make(),
                     catalog.desc.text.textStyle(context.captionStyle!).make(),
                     10.heightBox,
                     "Dolores amet invidunt gubergren lorem rebum duo dolore ipsum, lorem ipsum et aliquyam rebum justo stet invidunt dolores. Duo elitr et et vero aliquyam, no et kasd elitr et. "
