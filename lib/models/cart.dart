@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_getters_setters
+
 import 'package:hello/models/catalog.dart';
 
 class CartModel {
@@ -13,7 +15,6 @@ class CartModel {
   Catalogmodel get catalog => _catalog;
 
   set catalog(Catalogmodel newCatalog) {
-    assert(newCatalog != null);
     _catalog = newCatalog;
   }
 
