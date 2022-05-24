@@ -5,7 +5,6 @@ import 'package:hello/models/catalog.dart';
 import 'package:hello/pages/home_detailpage.dart';
 import 'package:hello/widgets/home_widgets/catalog_image.dart';
 import 'package:velocity_x/velocity_x.dart';
-
 import 'add_to_cart.dart';
 
 class Cataloglist extends StatelessWidget {
@@ -65,5 +64,3 @@ class CatalogItem extends StatelessWidget {
     ).color(context.canvasColor).rounded.square(150).make().py16();
   }
 }
-
-
