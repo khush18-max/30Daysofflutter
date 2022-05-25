@@ -2,6 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:hello/core/store.dart';
 import 'package:hello/models/cart.dart';
 import 'dart:convert';
@@ -22,7 +23,7 @@ class Homepage extends StatefulWidget {
 class _HomepageState extends State<Homepage> {
   final int days = 30;
   final String name = "codepur";
-  final url = "https://api.jsonbin.io/b/604dbddb683e7e079c4eefd3";
+  //final url = "https://api.jsonbin.io/b/604dbddb683e7e079c4eefd3";
   @override
   void initState() {
     super.initState();
@@ -31,9 +32,10 @@ class _HomepageState extends State<Homepage> {
 
   loadData() async {
     await Future.delayed(const Duration(seconds: 2));
-    //final itemJson = await rootBundle.loadString("assets/files/item.json");
-    final response = await http.get(Uri.parse(url));
-    final itemJson = response.body;
+    final itemJson = await rootBundle.loadString("assets/files/item.json");
+    //final response = await http.get(Uri.parse(url));
+    //final itemJson = response.body;
+    
     final decodedData = jsonDecode(itemJson);
     final productsData = decodedData["items"];
     Catalogmodel.items = List.from(productsData)
@@ -55,7 +57,7 @@ class _HomepageState extends State<Homepage> {
                   backgroundColor: context.theme.buttonColor,
                   child: const Icon(CupertinoIcons.cart, color: Colors.white))
               .badge(
-                  color: Vx.red500,
+                  color: Vx.gray200,
                   size: 22,
                   count: _cart.items.length,
                   textStyle: const TextStyle(
